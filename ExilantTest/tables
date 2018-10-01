@@ -1,0 +1,17 @@
+create table EMP_DETAILS(
+eid int PRIMARY KEY AUTO_INCREMENT,
+lname varchar(15) NOT NULL,
+fname varchar(15) NOT NULL,
+age int NOT NULL,
+phone bigint NOT NULL UNIQUE,
+email varchar(25) NOT NULL UNIQUE,
+gender varchar(6) NOT NULL
+);
+
+create table EMP_LOGIN(
+eid int references EMP_DETAILS(eid),
+username varchar(15) NOT NULL UNIQUE,
+password varchar(15) NOT NULL
+);
+
+
